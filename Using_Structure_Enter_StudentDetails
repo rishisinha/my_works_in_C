@@ -1,3 +1,5 @@
+Enter Student details and save the file
+
 #include <stdio.h>
 struct student
 {
