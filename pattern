@@ -1,3 +1,13 @@
+Create Pattern like below and continue only if the entered number is Odd:-
+
+    1                                                                                                                                                                
+   13                                                                                                                                                                
+  135                                                                                                                                                                
+ 1357                                                                                                                                                                
+  135                                                                                                                                                                
+   13                                                                                                                                                                
+    1
+
 a) output1
 Enter number to check : 6                                                                                                                                           
 Error: 6 is even number. Please enter Odd number to proceed...
