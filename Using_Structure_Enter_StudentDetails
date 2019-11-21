@@ -37,9 +37,6 @@ for(i=0;i<n;i++)
 {
 printf("\n %d no. student info\n",i+1);
 printf("\tName:%s\n ",s[i].name);
-//or use
-// puts(s[i].name);
-
 printf("\t Roll number: %d\n",s[i].roll);
 
 printf("\t Marks: %.1f\n\n",s[i].marks);
@@ -52,8 +49,6 @@ FILE *fp;
    {
 
             fwrite(&s[i],sizeof(s[i]),1,fp);
-
-           //fprintf(fp,"%s, %d, %d, %s\n",&emp1[i].name,emp1[i].age,emp1[i].salary,emp1[i].address);
     }
 printf("\nRecord has been added successfully…!!");
     fclose(fp);
