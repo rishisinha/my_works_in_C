@@ -1,0 +1,65 @@
+a) output1
+Enter number to check : 6                                                                                                                                           
+Error: 6 is even number. Please enter Odd number to proceed...
+ 
+b)output 2
+Enter number to check : 7                                                                                                                                           
+    1                                                                                                                                                                
+   13                                                                                                                                                                
+  135                                                                                                                                                                
+ 1357                                                                                                                                                                
+  135                                                                                                                                                                
+   13                                                                                                                                                                
+    1
+
+Code:
+
+#include<stdio.h>
+#include<conio.h>
+int pattern(int number)
+{
+int i, j, M,k;
+if(number % 2 != 0)
+{
+M = number-3;
+{
+int i, j, k;
+for(i = 1;i <= M;i++)
+{
+for(j = M;j > i;j--)
+{
+printf(" ");
+}
+for(k = 1;k <= (j*2)-1;k+=2) 
+//j<=(i*2)-1; j+=2
+{
+printf("%d",k);
+}
+printf("\n");
+}
+for(i = 1;i <= number-1;i++)
+{
+for(j = 1;j <= i;j++)
+{
+printf(" ");
+}
+int p =1;
+for(k = M-1;k >= i;k--)
+{
+printf("%d",p);
+p+=2;
+}
+printf("\n");
+}
+}}
+else
+printf("Error: %d is even number. Please enter Odd number to proceed...", number);
+}
+int main()
+{
+int number;
+printf("Enter number to check : ");
+scanf("%d", &number);
+pattern(number);
+return 0;
+}
