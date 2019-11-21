@@ -1,0 +1,89 @@
+Area & Perimeter of Square using various ways in c & C++
+
+1) pure POP
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int length, perimeter, area;
+printf("Enter length of a side of square :");
+scanf("%d",&length);
+area=length*length;
+perimeter=4*length;
+printf("Area = %d\tPerimeter=%d",area,perimeter);
+getch();
+}
+
+Output:
+Enter length of a side of square :12                                                                                                   
+Area = 144      Perimeter=48    
+
+2) Using function in C
+
+#include<stdio.h>
+#include<conio.h>
+float perimeter(float s)
+{
+return (4*s);
+}
+float area(float s)
+{
+return (s*s);
+}
+int main()
+{
+float s,p,a;
+printf("enter side of square: ");
+scanf("%f",&s);
+p=perimeter(s);
+a=area(s);
+printf("Area of Square : %f\n",a);
+printf("Perimeter of Square : %f\n",p);
+return 0;
+}
+
+Output
+enter side of square: 12                                                                                                                                            
+Area of Square : 144.000000                                                                                                                                         
+Perimeter of Square : 48.000000 
+
+3) Using Class & Object
+
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+class Square
+{
+public:
+int side, peri, area;
+void getdata()
+{
+cout<<"Enter side of square: ";
+cin>>side;
+}
+void perimeter()
+{
+peri = 4* side;
+cout<<"Perimeter of square is "<<peri<<"\n";
+}
+void squarearea()
+{
+area = side*side;
+cout<<"Area of square is "<<area;
+}
+};
+int main()
+{
+Square s;
+s.getdata();
+s.perimeter();
+s.squarearea();
+};
+
+Output:
+Enter side of square: 5                                                                                                                                             
+Perimeter of square is 20                                                                                                                                           
+Area of square is 25
+
