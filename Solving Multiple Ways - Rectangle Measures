@@ -1,0 +1,92 @@
+
+1) pure POP
+
+#include<stdio.h>
+#include<conio.h> 
+void main() 
+{
+int len, bre, peri, area; 
+printf("Enter length and breadth of the rectangle :"); 
+scanf("%d%d",&len,&bre); area=len*bre; peri=(2*len)+(2*bre); 
+printf("Area = %d\tPerimeter=%d",area,peri); 
+getch(); 
+}
+
+output:
+Enter length and breadth of the rectangle :2                                                                                           
+4                                                                                                                                      
+Area = 8        Perimeter=12
+
+2) Using function in C
+
+#include<stdio.h>
+#include<conio.h>
+float perimeter(float l, float b)
+{
+return ((2*l)+(2*b));
+}
+float area(float l, float b)
+{
+return (l*b);
+}
+int main()
+{
+float l,b,p,a;
+
+printf("enter length of Rectangle: ");
+scanf("%f",&l);
+printf("enter breadth of Rectangle: ");
+scanf("%f",&b);
+
+p=perimeter(l,b);
+a=area(l,b);
+printf("Area of Rectangle : %f\n",a);
+printf("Perimeter of Rectangle : %f\n",p);
+return 0;
+}
+ 
+Output:
+enter length of Rectangle: 10                                                                                                                                       
+enter breadth of Rectangle: 5                                                                                                                                       
+Area of Rectangle : 50.000000                                                                                                                                       
+Perimeter of Rectangle : 30.000000
+
+3) Using Class & Object
+
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+class Rectangle
+{
+public:int l, b, peri, area;
+void getdata()
+{cout<<"Enter length of Rectangle: ";
+cin>>l;
+cout<<"\n Enter breadth of Rectangle: ";
+cin>>b;
+}
+void perimeter()
+{
+peri = (2*l)+(2*b);
+cout<<"Perimeter of Rectangle is "<<peri<<"\n";
+}
+void rectanglearea()
+{
+area = l*b;
+cout<<"Area of Rectangle is "<<area;
+}};
+int main()
+{
+Rectangle R;
+R.getdata();
+R.perimeter();
+R.rectanglearea();
+};
+
+Output:
+Enter length of Rectangle: 12                                                                                                                                       
+                                                                                                                                                                    
+ Enter breadth of Rectangle: 10                                                                                                                                     
+Perimeter of Rectangle is 44                                                                                                                                        
+Area of Rectangle is 120 
